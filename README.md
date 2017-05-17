@@ -2,9 +2,9 @@
 A Java based application that allows the user to manage a cluster of instances on the Amazon Web Services IaaS.
 
 ## Software Prerequisities 
-- Linux Unbuntu
-- Java Virtual Machine
-- Apache Maven
+- Linux Unbuntu 16.04 LTS
+- Java Virtual Machine 1.7
+- Apache Maven 3.0
 
 ## Build the project
 
