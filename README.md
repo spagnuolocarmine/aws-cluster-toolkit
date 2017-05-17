@@ -8,6 +8,7 @@ sudo login test
 
 vim hello.c
 
+'''
 #include <mpi.h>
 #include <stdio.h>
 
@@ -36,6 +37,7 @@ int main(int argc, char** argv) {
     // Finalize the MPI environment.
     MPI_Finalize();
 }
+'''
 
 mpicc hello.c -o hello
 
