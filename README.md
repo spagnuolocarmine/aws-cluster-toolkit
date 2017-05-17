@@ -1,5 +1,4 @@
-# aws-cluster-toolkit
-Amazon Web Services HPC Cluster Toolkit
+# Amazon Web Services HPC Cluster Toolkit
 
 ## Software Prerequisities 
 - Linux Unbuntu
