@@ -1,14 +1,20 @@
 # aws-cluster-toolkit
 Amazon Web Services HPC Cluster Toolkit
 
+## Configure the user
 
-sudo passwd test
+Consider that your cluster name is 'test' the user is 'test'.
+- Set the password
+```sudo passwd test```
+- Login as local user
+```sudo login test```
 
-sudo login test
+## Test MPI Program
 
-vim hello.c
-
-'''
+- Create new MPI program
+```vim hello.c```
+- HelloWorld MPI program
+```
 #include <mpi.h>
 #include <stdio.h>
 
@@ -37,10 +43,10 @@ int main(int argc, char** argv) {
     // Finalize the MPI environment.
     MPI_Finalize();
 }
-'''
-
-mpicc hello.c -o hello
-
-scp hello IP_SLAVE
-
-mpirun -np 4 --host MASTER,IP_SLAVE1,IP_SLAVE2 hello
+```
+- Compile the MPI program 
+```mpicc hello.c -o hello```
+- Copy on all cluster machine the compiled program
+```scp hello IP_SLAVE```
+- Run the program on the cluster
+```mpirun -np 4 --host MASTER,IP_SLAVE1,IP_SLAVE2 hello```
