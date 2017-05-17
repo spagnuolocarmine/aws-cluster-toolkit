@@ -1,4 +1,5 @@
 # Amazon Web Services HPC Cluster Toolkit
+A Java based application that allows the user to manage a cluster of instances on the Amazon Web Services IaaS.
 
 ## Software Prerequisities 
 - Linux Unbuntu
@@ -7,22 +8,46 @@
 
 ## Build the project
 
-## AWS Cluster Toolkit Options
+## AWS Cluster Toolkit 
 
-- one
-- two
+### Configure the environment
+In your home directory create a directory '.aws' and create a file named 'credentials' contains:
+```
+[default]
+aws_access_key_id=YOUR AWS ACCESS KEY
+aws_secret_access_key=YOUR AWS SECRECT KEY
+```
+
+### Options
+- '-s'          Number of total instaces (min 2, master and slave)
+- '-n'          Name of the cluster
+- '-a'          Instamce AMI (for MPI support the toolkit considers to use the [StarCLuster](http://star.mit.edu/cluster/) AMI ami-52a0c53b, that is also the default value)
+- '-t'         Instances type (the default value is t2.micro)
+- '-k-private' Cluster SSH private key 
+- '-k-public'  Cluster SSH  public key
 
 ## Create new cluster
+Run the aws-cluster-toolkit application:
+
+```
+java -jar cluster-toolkit-0.0.1-SNAPSHOT.jar -s 2 -n test -k-private pkey -k-public p.pub
+```
+
+### How to generate the SSH keys pair
+
+Run the following command and specify a file name where store the keys:
+```ssh-keygen -t rsa```
+
 
 ## Configure the user
-Consider that your cluster name is 'test' the user is 'test'.
+Consider that your cluster name is 'test', so your username is 'test'. You have to follow these steps:
 - Set the password
 ```sudo passwd test```
 - Login as local user
 ```sudo login test```
 
 ## Test MPI Program
-- Create new MPI program
+- Create a new MPI program
 ```vim hello.c```
 - HelloWorld MPI program
 ```
