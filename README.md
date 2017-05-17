@@ -1,8 +1,21 @@
 # aws-cluster-toolkit
 Amazon Web Services HPC Cluster Toolkit
 
-## Configure the user
+## Software Prerequisities 
+- Linux Unbuntu
+- Java Virtual Machine
+- Apache Maven
 
+## Build the project
+
+## AWS Cluster Toolkit Options
+
+- one
+- two
+
+## Create new cluster
+
+## Configure the user
 Consider that your cluster name is 'test' the user is 'test'.
 - Set the password
 ```sudo passwd test```
@@ -10,7 +23,6 @@ Consider that your cluster name is 'test' the user is 'test'.
 ```sudo login test```
 
 ## Test MPI Program
-
 - Create new MPI program
 ```vim hello.c```
 - HelloWorld MPI program
