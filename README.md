@@ -15,11 +15,11 @@ Build using Apache Maven ```mvn package```
 - Connect to the EC2 instance using SSH
 - Update your Advanced Packaging Tool ```sudo apt-get update```
 - Install Java 8 
-```sudo add-apt-repository ppa:webupd8team/java 
+```
+   sudo add-apt-repository ppa:webupd8team/java 
    sudo apt-get update
    sudo apt-get install oracle-java8-installer
 ```
-   
 - Install Apache Maven ```sudo apt-get install maven```
 - Clone the project using GIT ```git clone https://github.com/spagnuolocarmine/aws-cluster-toolkit.git```
 - Build the project
